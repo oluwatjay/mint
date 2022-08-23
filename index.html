@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <img src="img/logo.png">
+
+        <button>Connect Wallet</button>
+    </nav>
+
+    <header>
+        <div class="top-text">
+            <h1>
+                UNITIVE LABS
+            <br>NFT COLLECTIONS
+            </h1>
+            <h6>2832 / 5555 MINTED</h6>
+            <button onclick=" openModal()">MINT NOW</button>
+
+            <div class="sub-text">
+                <p>
+                    MINT PRICE 0.04 ETH + GAS</p>
+                    <p>MINT IS LIVE UNTIL 00 AUGUST 04:00H</p>
+<p>PRESALE : SOLDOUT
+                </p>
+
+            </div>
+        </div>
+        <div class="image">
+            <img class="img1" src="img/CARD.png">
+            <img class="img2" src="img/CARD-1.png">
+        </div>
+    </header>
+    <div id="modal">
+        <div class="card">
+            <div class="textcon">
+            <div class="innercard">
+                    
+            <h1>MINT YOUR NFT</h1>
+           <img src="img/CARD.png">
+           <div class="remaining">
+            <p>REMAINING</p>
+            <p class="p2">2000/3000</p>
+           </div>
+
+           <div class="remaining">
+            <p>MINT PRICE</p>
+            <p class="p2">0.04ETH</p>
+           </div>
+
+           <div class="remaining">
+            <p>QUANTITY</p>
+            <div class="container">
+                <div id="increment-count">
+                  <button id="minus">+</button>
+                </div>
+                <div id="total-count">
+                    0
+                </div>
+                <div id="decrement-count">
+                    <button id="minus">-</button>
+                </div>
+              </div>
+           </div>
+
+            </div>
+      
+    
+            <button onclick="closeModal()">Close</button>
+        </div>
+        </div>
+    
+    </div>
+    <div class="content">
+
+        <h1>
+            HOW TO MINT
+        </h1>
+
+        <div class="innercontent">
+            <div class="card">
+                <div class="textcon">
+                    <div class="iconimg">
+                        <img src="img/Icon Placeholder.png">
+                    </div>
+              
+        
+                    <h3>Connect your Wallet</h3>
+                    <p>
+                        Click on the Connect wallet
+        button at the top right to 
+        connect your wallet
+                    </p>
+                </div>
+              
+    
+            </div>
+    
+            <div class="card">
+                <div class="textcon">
+                <div class="iconimg">
+                    <img src="img/Icon Placeholder-1.png">
+                </div>
+          
+    
+                <h3>Select Quantity</h3>
+                <p>
+                    Selcct the number
+                    of pieces you want to buy
+                </p>
+            </div>
+    
+            </div>
+    
+            <div class="card">
+                <div class="textcon">
+                <div class="iconimg">
+                    <img src="img/Icon Placeholder-2.png">
+                </div>
+          
+    
+                <h3>Confirm transcation</h3>
+                <p>
+                    Confirm the transaction 
+                    from the wallet popup
+                </p>
+    
+            </div></div>
+    
+            <div class="card">
+                <div class="textcon">
+                <div class="iconimg">
+                    <img src="img/Icon Placeholder-3.png">
+                </div>
+          
+    
+                <h3>Receive your NFT</h3>
+                <p>
+                    ... and voila!! You have
+    you NFT in your wallet. 
+                </p>
+            </div>
+            </div>
+        </div>
+    
+    <div class="counter">
+        <h1 id="days"></h1>
+        <h1 id="hours"></h1>
+        <h1 id="mins"></h1>
+        <h1 id="secs"></h1>
+        <h1 id="end"></h1>
+        
+
+    </div>
+        <script>
+        // The data/time we want to countdown to
+        var countDownDate = new Date("Aug 26, 2022 16:37:52").getTime();
+    
+        // Run myfunc every second
+        var myfunc = setInterval(function() {
+    
+        var now = new Date().getTime();
+        var timeleft = countDownDate - now;
+            
+        // Calculating the days, hours, minutes and seconds left
+        var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+            
+        // Result is output to the specific element
+        document.getElementById("days").innerHTML = days + "d "
+        document.getElementById("hours").innerHTML = hours + "h " 
+        document.getElementById("mins").innerHTML = minutes + "m " 
+        document.getElementById("secs").innerHTML = seconds + "s " 
+            
+        // Display the message when countdown is over
+        if (timeleft < 0) {
+            clearInterval(myfunc);
+            document.getElementById("days").innerHTML = ""
+            document.getElementById("hours").innerHTML = "" 
+            document.getElementById("mins").innerHTML = ""
+            document.getElementById("secs").innerHTML = ""
+            document.getElementById("end").innerHTML = "TIME UP!!";
+        }
+        }, 1000);
+        </script>
+    
+    
+    <div class="join">
+
+        <h1>JOIN OUR COMMUNITY</h1>
+        <p>We have a large scale group to support each other, Join us to get the news as soon <br>as possible and follow our latest announcements!</p>
+
+        <button><a href="https://t.co/DiMqPbDx0x">Join Community now</a></button>
+
+    </div>
+</div>
+
+
+
+
+    <script>
+        function openModal() {
+  var x = document.getElementById("modal");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+  }
+}
+
+function closeModal() {
+  var x = document.getElementById("modal");
+  if (x.style.display === "flex") {
+    x.style.display = "none";
+  }
+}
+
+const totalCount = document.getElementById("total-count");
+
+// Variable to track count
+var count = 0;
+
+// Display initial count value
+totalCount.innerHTML = count;
+
+const handleIncrement = () => {
+  count++;
+  totalCount.innerHTML = count;
+};
+
+const handleDecrement = () => {
+  count--;
+  totalCount.innerHTML = count;
+};
+
+const incrementCount = document.getElementById("increment-count");
+const decrementCount = document.getElementById("decrement-count");
+
+// Add click event to buttons
+incrementCount.addEventListener("click", handleIncrement);
+decrementCount.addEventListener("click", handleDecrement);
+
+</script>
+</html>

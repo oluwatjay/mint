@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, ">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <img src="img/logo.png">
+
+        <button>Connect Wallet</button>
+    </nav>
+
+
+    <div class="mint-content">
+        <div class="mint-card">
+
+            <h1>MINT YOUR NFT</h1>
+            <div class="mintimg">
+                <img src="img/CARD.png">
+            </div>
+                <div class="info">
+                    <table>
+                        <tr>
+                            <td>REAMINING</td>
+                            <td></td>
+                            <td>3000/4000</td>
+                          </tr>
+                          <tr>
+                            <td>MINT PRICE</td>
+                            <td></td>
+                            <td>0.04ETH</td>
+                          </tr>
+
+                          <tr>
+                            <td>QUANTITY</td>
+                            <td class="qnt"> <div id="increment-count">
+                                <button id="minus">+</button>
+                              </div>
+                              <div id="total-count">
+                                  0
+                              </div>
+                              <div id="decrement-count">
+                                  <button id="minus">-</button>
+                              </div></td>
+                            <td>0.04ETH</td>
+                          </tr>
+                    </table>
+
+                   
+                  
+                </div>
+                <div class="btn">
+
+                <button class="mintbtn">MINT NOW</button>
+            </div>
+        </div>
+
+    </div>
+
+<script>
+
+    
+const totalCount = document.getElementById("total-count");
+
+// Variable to track count
+var count = 0;
+
+// Display initial count value
+totalCount.innerHTML = count;
+
+const handleIncrement = () => {
+  count++;
+  totalCount.innerHTML = count;
+};
+
+const handleDecrement = () => {
+  count--;
+  totalCount.innerHTML = count;
+};
+
+const incrementCount = document.getElementById("increment-count");
+const decrementCount = document.getElementById("decrement-count");
+
+// Add click event to buttons
+incrementCount.addEventListener("click", handleIncrement);
+decrementCount.addEventListener("click", handleDecrement);
+</script>
+
+</body>  
+</html>
